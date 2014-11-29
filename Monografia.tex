@@ -15,8 +15,8 @@
 \usepackage{abntcite}
 \usepackage{algorithm}
 \usepackage{algorithmic}
+
 %\usepackage{alg}
-%\usepackage{hyperref}
 
 
 % Redefinicao de instrucoes
@@ -37,57 +37,7 @@
 \renewcommand{\algorithmiccomment}[1]{\% #1}
 
 
-% Definicao da lista de simbolos
-% \simb[entrada na lista de simbolos]{simbolo}:
-% Escreve o simbolo no texto e uma entrada na lista de simbolos.
-% Se o parametro opcional e omitido, usa-se o parametro obrigatorio.
-\newcommand{\simb}[2][]
-{%
-	\ifthenelse{\equal{#1}{}}
-	{\addcontentsline{los}{simbolo}{#2}}
-	{\addcontentsline{los}{simbolo}{#1}}#2
-}
-% Para aceitar comandos com @ (at) no nome
-\makeatletter 
-% \listadesimbolos: comando que imprime a lista de simbolos
-\newcommand{\listadesimbolos}
-{
-	\pretextualchapter{Lista de símbolos}
-	{\setlength{\parindent}{0cm}
-	\@starttoc{los}}
-}
-% Como a entrada sera impressa
-\newcommand\l@simbolo[2]{\par #1}
-\makeatother
-
 \newcommand{\ignore}[1]{}
-
-% Definicao da lista de abreviaturas e siglas
-% \abrv[entrada na lista de simbolos]{abreviatura}:
-% Escreve a sigla/abreviatura no texto e uma entrada na lista de abreviaturas e siglas.
-% Se o parametro opcional e omitido, usa-se o parametro obrigatorio.
-\newcommand{\abrv}[2][]
-{%
-	\ifthenelse{\equal{#1}{}}
-	{\addcontentsline{loab}{abreviatura}{#2}}
-	{\addcontentsline{loab}{abreviatura}{#1}}#2
-}
-% Para aceitar comandos com @ (at) no nome
-\makeatletter 
-% \listadeabreviaturas: comando que imprime a lista de abreviaturas e siglas
-% \newcommand{\listadeabreviaturas}
-% {
-% 	\pretextualchapter{Lista de abreviaturas e siglas}
-% 	{\setlength{\parindent}{0cm}
-% 	\@starttoc{loab}}
-% }
-% Como a entrada sera impressa
-% \newcommand\l@abreviatura[2]{\par #1}
-\makeatother
-
-
-% \listofalgorithms: comando que imprime a lista de algoritmos
-\renewcommand{\listalgorithmname}{Lista de algoritmos}
 
 
 % Hifenização de palavras feita de forma incorreta pelo LaTeX
