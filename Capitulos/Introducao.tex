@@ -1,46 +1,16 @@
 \chapter{Introdução}
 
-% A introdução é a parte inicial do texto e que possibilita uma visão geral de todo o trabalho, devendo constar a delimitação do assunto tratado, objetivos da pesquisa, motivação para o desenvolvimento da mesma e outros elementos necessários para situar o tema do trabalho.
+No contexto de trabalhadores do conhecimento, como na área de desenvolvimento de software, é diária a troca de conhecimento com o objetivo de se obter um melhor desempenho para a organização inteira~\cite{Druker1993, Wiig2003}. A gerência de conhecimento lida com o reuso de conhecimento em  suas diferentes formas, como: design de código, requisitos, modelos, dados, padrões e lições aprendidas~\cite{Levy2009}. Um dos casos de reuso é o conhecimento de como se deu a implementação de uma determinada funcionalidade em um determinado projeto de software. Exemplo: diferentes projetos podem implementar cadastro de usuário via Google ou Facebook, cada um com certas minúcias.
 
-% \section{Organização do trabalho}
+É comum também que essa implementação em diferentes contextos seja feita através de abordagens \textit{ad-hoc} (reimplementação completa de trechos de código com poucas modificações e sem modularizacão visando reuso)~\cite{SangMok2011}. Nesse caso, desenvolvedores mais experientes em um determinado projeto ou que já implementação tal funcionalidade tendem a atuar como mentores~\cite{CubraniC2004} e tal ato, como atividade de gerência de conhecimento, acarrete no despendimento de recursos, principalmente dos mentores~\cite{Wiig2003}. 
 
-% Nesta seção deve ser apresentado como está organizado o trabalho, sendo descrito, portanto, do que trata cada capítulo.
+Atualmente, as maneiras mais comuns de troca de informações entre desenvolvedores (incluindo, obviamente, a mentoria) são via oral, escrita ou repasse de referências (documentação, links externos, etc)~\cite{Storey2014, Olson2000, CubraniC2004}. Em alguns casos, pela natureza própria natureza do meio, comunicação não se mantém registrada física ou virtualmente. Um dos exemplos de comunicação sem registro é a comunicação exclusivamente oral~\cite{Olson2000}.
 
-% Introdução
+Além disso, existe o fator da rotatividade de membros em equipes, sempre associado a custos de transferência de conhecimento e treinamento~\cite{Hall2008}, possuindo relação com sucesso ou fracasso de projetos de software~\cite{Hall2008}. 
 
-%caracterização do problema
+Assim, a elaboração de uma ferramenta capaz de agregar referências de código e tarefas a soluções pode trazer enormes benefícios a equipes de desenvolvimento~\cite{CubraniC2004}. A ferramenta atuaria como um catálogo, agregando referências de código, informações externas e comentários fornecidos por desenvolvedores da equipe com o intuito de auxiliar outros desenvolvedores a buscar em fontes da própria equipe como se deram implementações de funcionalidades semelhantes às que já foram feitas em outros projetos.
 
-% ORIGINAL MEU
-% No contexto de equipes de desenvolvimento de software, é constante a troca de conhecimento entre seus participantes.\ignore{FONTE} Ainda mais comum que isso é a implementação de funcionalidades semelhantes em diferentes projetos.\ignore{FONTE}
+Este estudo propõe a elaboração de tal ferramenta com a participação de uma equipe real de desenvolvimento de software. A equipe em questão é a 4Soft\footnote{\url{http://www.4softjr.com.br}}, empresa júnior\footnote{\url{http://en.wikipedia.org/wiki/Junior_enterprise}} dos cursos de Engenharia de Software e Tecnologia da Informação da Universidade Federal do Rio Grande do Norte (UFRN\footnote{\url{http://www.ufrn.br}}). A empresa atua na área de desenvolvimento de software Web para clientes de diversos ramos e é formada exclusivamente por alunos dos cursos de Bacharelado em Engenharia de Software\footnote{\url{http://www.dimap.ufrn.br/pt/graduacao/engenharia-de-software/apresentacao}} e Bacharelado em Tecnologia da Informação\footnote{\url{http://www.imd.ufrn.br/curso_bacharelado.php}} da UFRN.
 
-No contexto de trabalhadores do conhecimento, como na área de desenvolvimento de software, é diária a troca de conhecimento com o objetivo de se obter um melhor desempenho para a organização inteira~\cite{Druker1993}~\cite{Wiig2003}.\ignore{FONTE 1} A gerência de conhecimento lida com o reuso de conhecimento em  suas diferentes formas, como: design de código, requisitos, modelos, dados, padrões e lições aprendidas~\cite{Levy2009}\ignore{FONTE 2}. Dentre esse reuso, se encontra, por exemplo, como se deu a implementação de uma determinada funcionalidade em um determinado projeto de software.
+O estudo também prevê uma análise crítica dos impactos do uso na mesma no contexto de empresa. Dentre os impactos previstos estão a redução da necessidade de mentoria ou consulta para os casos de  reuso de funcionalidades em diferentes contextos. Tais impactos visam acarretar a redução de gastos de recursos relacionados a tempo, esforço e trabalho dos desenvolvedores que atuam como mentores dentro da equipe. 
 
-% FONTE 1 - Knowledge workers are required to improve their work on a daily basis in a process that cumulates into a significant improvement in performance for the entire enterprise [6][21].
-
-% FONTE 2 - KM is comprised of the elicitation, packaging and management, and reuse of knowledge in all of its different forms, and in particular, software engineering artifacts as code, design, requirements, models, data, standards, and lessons learned.
-
-%Software development can be improved by recognizing the related knowledge content and structure as well as the required knowledge, and performing planning activities. - 05071412.pdf
-
-
-Atualmente, as maneiras mais comuns de troca de informações entre desenvolvedores são via oral, escrita ou repasse de referências (documentação, links externos, etc)~\cite{Storey2014}~\cite{Olson2000}~\cite{CubraniC2004}\ignore{FONTE 3} e, em alguns casos, pela natureza do meio, não se mantém registrada para consulta~\cite{Olson2000}.
-
-% FONTE 3 - p100-storey.pdf PROFESSOR: Isso tá ao longo do artigo, como citar?
-
-É comum também desenvolvedores implementarem funcionalidades semelhantes em diferentes contextos usando abordagens ad-hoc~\cite{SangMok2011}. Nesse caso, desenvolvedores mais experientes em um determinado projeto tendem a atuar como mentores~\cite{CubraniC2004} e tal ato, como atividade de gerência de conhecimento, tende a consumir recursos~\cite{Wiig2003}.\ignore{FONTE 4}
-
-% FONTE 4 - One of the cornerstones of KM is improving productivity by effective sharing and transfer of knowledge, which tends to be time-consuming and often impossible [21] - 05071412.pdf.
-
-A elaboração de uma ferramenta capaz de agregar referências de código e tarefas a soluções pode trazer enormes benefícios a equipes de desenvolvimento~\cite{CubraniC2004}, visto que a rotatividade de membros nesse tipo de equipe geralmente está associada ao sucesso ou fracasso de projetos~\cite{Hall2008}. 
-
-Este estudo propõe a elaboração de tal ferramenta com a participação de uma equipe real de desenvolvimento de software. Esta equipe, posteriormente, fará o uso do produto elaborado em seu contexto de trabalho.
-
-A equipe em questão é a 4Soft, empresa júnior dos cursos de Engenharia de Software e Tecnologia da Informação da Universidade Federal do Rio Grande do Norte (UFRN). A empresa atua na área de desenvolvimento de software web para clientes de diversos ramos e é formada exclusivamente por alunos dos cursos de Bacharelado em Engenharia de Software e Bacharelado em Tecnologia da Informação da UFRN~\cite{4Soft}.
-
-O estudo também prevê uma análise crítica dos impactos do uso na mesma no contexto de empresa.
-
-
-
-
-% In software development, it is common for a member of the team to implement a feature very similar to one that was already done by a teammate. In some cases, that is a cumbersome task. Searching through documentation and code, as well as asking other teammates can be time and resource demanding.
-
-% We propose a tool that will permit a team to store documentation for features via GitHub issues and comm its merged with other information like Stack Overflow questions, framework or language documentation or even notes written by teammates. This tool will be designed, tested and evaluated by the developers of 4Soft, the Junior Enterprise of Software Engineer of UFRN.
